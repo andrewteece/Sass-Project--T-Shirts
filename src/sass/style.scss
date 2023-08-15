@@ -49,3 +49,46 @@ $size-36: 3rem;
     background-color: $bg;
   }
 }
+
+// RESET
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+// BASE STYLES
+
+body {
+  font-family: $ff-primary;
+  font-size: $fs-400;
+  color: $blue-800;
+
+  // for demo
+  margin: $size-36 0;
+}
+
+// COMPOSITION STYLES
+
+.wrapper {
+  width: min(58rem, 100% - 2rem);
+  margin-inline: auto;
+}
+
+.even-columns {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: var(--gap, 1rem);
+}
