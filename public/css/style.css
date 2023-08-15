@@ -1,3 +1,7 @@
+.button, .card {
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.15);
+}
+
 *,
 *::before,
 *::after {
@@ -22,7 +26,7 @@ body {
   margin: 3rem 0;
 }
 
-.wrapper {
+.container {
   width: min(58rem, 100% - 2rem);
   margin-inline: auto;
 }
@@ -67,6 +71,47 @@ body {
 .page-title {
   font-size: 3rem;
   font-weight: 900;
+}
+
+.card {
+  border-radius: 2rem;
+  overflow: hidden;
+  background-color: hsl(0, 0%, 100%);
+}
+.card[data-type=product] h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.card[data-type=product] .card__content {
+  padding: 2rem 1rem 1rem;
+  display: flex;
+  align-items: end;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.card[data-type=product] .button {
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+.button {
+  display: inline-block;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 1rem;
+  background: hsl(357, 100%, 68%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 100vw;
+  transform: scale(1);
+  transition: transform 350ms ease;
+}
+.button:hover, .button:focus {
+  transform: scale(1.05);
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(357, 74%, 40%);
 }
 
 /*# sourceMappingURL=style.css.map */
