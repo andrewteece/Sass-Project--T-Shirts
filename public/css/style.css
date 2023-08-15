@@ -34,4 +34,39 @@ body {
   gap: var(--gap, 1rem);
 }
 
+.margin-block-xl {
+  margin-block: 3rem;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.fw-black {
+  font-weight: 900;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-accent {
+  color: hsl(357, 100%, 68%);
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
 /*# sourceMappingURL=style.css.map */
