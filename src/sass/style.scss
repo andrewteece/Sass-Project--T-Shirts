@@ -42,7 +42,7 @@ $size-36: 3rem;
 
 @mixin interactive-scale($color, $bg, $scale: 1.05) {
   transform: scale(1);
-  transition: scale 350ms ease;
+  transition: scale 1s ease-in-out;
 
   &:hover,
   &:focus {
@@ -166,6 +166,21 @@ body {
   }
 
   &[data-type="link-with-image"] {
+    text-decoration: none;
+    color: $red-500;
+
+    @include interactive-scale($neutral-100, $blue-800);
+
+    #{$parent}__content {
+      padding: $size-16 $size-12;
+    }
+
+    img {
+      height: 8.75rem;
+      width: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
   }
 }
 
